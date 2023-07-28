@@ -24,9 +24,7 @@ export const TransTbodyTr = styled.tr`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 
-  &:nth-child(even) {
-    background-color: #f2f2f2;
-  }
+  background-color: ${({ even }) => (even ? '#f2f2f2' : 'transparent')};
 `;
 export const TransTbodyTd = styled.td`
   padding: 10px;
