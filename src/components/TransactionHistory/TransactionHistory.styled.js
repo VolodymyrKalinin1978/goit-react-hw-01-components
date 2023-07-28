@@ -12,12 +12,10 @@ export const TransHistoryTr = styled.tr`
   background-color: #f2f2f2;
 `;
 export const TransHistoryTh = styled.th`
-
   padding: 10px;
   text-align: left;
   border-bottom: 2px solid #ccc;
-  border-right: 1px solid #ccc
-  
+  border-right: 1px solid #ccc;
 `;
 export const TransTbody = styled.tbody``;
 export const TransTbodyTr = styled.tr`
@@ -29,5 +27,5 @@ export const TransTbodyTr = styled.tr`
 export const TransTbodyTd = styled.td`
   padding: 10px;
   border-bottom: 1px solid #ccc;
-  border-right: 1px solid #ccc
+  border-right: 1px solid #ccc;
 `;

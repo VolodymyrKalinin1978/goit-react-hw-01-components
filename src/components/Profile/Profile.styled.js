@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 
-
-export  function generateRandomColor() {
+export function generateRandomColor() {
   const letters = '0123456789ABCDEF';
   let color = '#';
   for (let i = 0; i < 6; i++) {
@@ -30,27 +29,23 @@ export const ProfileDiv = styled.div`
 `;
 
 export const Name = styled.p`
-margin-bottom: 10px;
-font-size: 25px;
-font-weight: 700;
-`
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: 700;
+`;
 export const Tag = styled.p`
-margin-bottom: 10px
-`
-export const Location = styled.p`
-
-`
+  margin-bottom: 10px;
+`;
+export const Location = styled.p``;
 export const Label = styled.span`
-margin-bottom: 10px;
-color: blue;
-`
-export const Quantity = styled.span`
-
-`
+  margin-bottom: 10px;
+  color: blue;
+`;
+export const Quantity = styled.span``;
 
 export const Description = styled.div`
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
   // justify-content: center;
   align-items: center;
 `;
@@ -68,7 +63,7 @@ export const StatsUl = styled.ul`
   display: flex;
   gap: 84px;
   flex-direction: row;
-  justify-content: space-between;;
+  justify-content: space-between;
   list-style-type: none;
   // background-color: gray;
 `;
