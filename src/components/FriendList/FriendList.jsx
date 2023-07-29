@@ -1,18 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import {FriendListUl, ItemLi, StatusSpan, AvatarImg,FriendName } from './FriendList/FriendList.styled'
-import { FriendListUl, ItemLi, StatusSpan, AvatarImg, FriendName} from './FriendList.styled';
+
+import FriendListItem from './FriendListItem/FriendListItem'
+
+import { FriendListUl} from './FriendList.styled';
 
 function FriendList({friends}) {
 
   return (
     <FriendListUl>
        {friends.map(item => (
-      <ItemLi   key={item.id}   >
-        <StatusSpan isOnline={item.isOnline}>{item.isOnline ? 'Online' : 'Offline'}</StatusSpan>
-        <AvatarImg src={item.avatar} alt={item.name} width="48" />
-        <FriendName>{item.name}</FriendName>
-      </ItemLi>
+      <FriendListItem  
+      key={item.id}
+      isOnline={item.isOnline}
+      avatar={item.avatar}
+      userName={item.name} ></FriendListItem>
        ))}
     </FriendListUl>
   );
@@ -22,9 +24,7 @@ FriendList.propTypes = {
   friends: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
-      isOnline: PropTypes.bool.isRequired,
-      avatar: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
+     
     })
   ).isRequired,
 };

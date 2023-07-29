@@ -1,16 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StatisticsSec, Title, StatListUl, ItemLi, LabelSpan, PercentageSpan }  from  './Statistics.styled';
+import {
+  StatisticsSec,
+  Title,
+  StatListUl,
+  ItemLi,
+  LabelSpan,
+  PercentageSpan,
+} from './Statistics.styled';
 
 function Statistics({ stats, title }) {
   // const {id, label, percentage} = stats
   return (
     <StatisticsSec>
-      <Title>{title}</Title>
+      {title && <Title>{title}</Title>}
 
       <StatListUl>
         {stats.map(item => (
-          <ItemLi key={item.id}  >
+          <ItemLi key={item.id}>
             <LabelSpan>{item.label}</LabelSpan>
             <PercentageSpan>{item.percentage}%</PercentageSpan>
           </ItemLi>
@@ -21,7 +28,7 @@ function Statistics({ stats, title }) {
 }
 
 Statistics.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,

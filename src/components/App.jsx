@@ -1,27 +1,18 @@
-import PropTypes from 'prop-types';
-import user from './Profile/user.json';
-import { ContainerMain } from './Container.styled';
-import data from './Statistics/data.json';
-import friends from './FriendList/friends.json';
-import transactions from './TransactionHistory/transactions.json';
+import data from 'data/data.json';
+import user from 'data/user.json';
+import transactions from 'data/transactions.json';
+import friends from 'data/friends.json';
+
 import Statistics from './Statistics/Statistics';
 import FriendList from './FriendList/FriendList';
 import TransactionHistory from './TransactionHistory/TransactionHistory';
-
 import Profile from './Profile/Profile';
+
+import { ContainerMain } from './Container.styled';
 
 export const App = () => {
   return (
-    <ContainerMain
-    // style={{
-    //   height: '100vh',
-    //   display: 'block',
-    //   justifyContent: 'center',
-    //   alignItems: 'center',
-    //   fontSize: 40,
-    //   color: '#010101',
-    // }}
-    >
+    <ContainerMain>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -37,18 +28,4 @@ export const App = () => {
   );
 };
 
-App.propTypes = {
-  user: PropTypes.shape({
-    username: PropTypes.string.isRequired,
-    tag: PropTypes.string.isRequired,
-    location: PropTypes.string.isRequired,
-    avatar: PropTypes.string.isRequired,
-    stats: PropTypes.object.isRequired,
-  }),
-  data: PropTypes.arrayOf(
-    PropTypes.shape({
-      label: PropTypes.string.isRequired,
-      percentage: PropTypes.number.isRequired,
-    })
-  ),
-};
+

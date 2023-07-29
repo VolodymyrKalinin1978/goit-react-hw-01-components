@@ -1,19 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ProfileDiv, Description, AvatarImg, StatsUl, StatsLi, Name, Tag, Location, Label, Quantity  } from './Profile.styled';
+import {
+  ProfileDiv,
+  Description,
+  AvatarImg,
+  StatsUl,
+  StatsLi,
+  Name,
+  Tag,
+  Location,
+  Label,
+  Quantity,
+} from './Profile.styled';
 
 function Profile({ username, tag, location, avatar, stats }) {
   const { followers, views, likes } = stats;
   return (
-    <ProfileDiv >
+    <ProfileDiv>
       <Description>
-        <AvatarImg src={avatar} alt="User avatar"/>
+        <AvatarImg src={avatar} alt="User avatar" />
         <Name>{username}</Name>
         <Tag>@{tag}</Tag>
         <Location>{location}</Location>
       </Description>
 
-      <StatsUl >
+      <StatsUl>
         <StatsLi>
           <Label>Followers</Label>
           <Quantity>{followers}</Quantity>

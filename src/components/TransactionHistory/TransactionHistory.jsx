@@ -1,6 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TransHistoryTable, TransHistoryThead, TransHistoryTr, TransHistoryTh, TransTbody, TransTbodyTr, TransTbodyTd } from './TransactionHistory.styled';
+import {
+  TransHistoryTable,
+  TransHistoryThead,
+  TransHistoryTr,
+  TransHistoryTh,
+  TransTbody,
+  TransTbodyTr,
+  TransTbodyTd,
+} from './TransactionHistory.styled';
 
 function TransactionHistory({ items }) {
   return (
